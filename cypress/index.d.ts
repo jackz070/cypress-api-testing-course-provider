@@ -3,6 +3,7 @@ export {}
 declare global {
   namespace Cypress {
     interface Chainable<Subject> {
+      maybeGetToken(sessionName: string): Chainable<string>
       /** https://www.npmjs.com/package/@cypress/skip-test
        * `cy.skipOn('localhost')` */
       skipOn(
